@@ -80,11 +80,10 @@ window.addEventListener('load', function() {
   });
 });
 
-//Search functionality
-document.getElementById("searchbar").addEventListener("keyup", myFunction);
+//Search functionality ----- need help here!
+document.getElementById("searchbar").addEventListener("keyup", searchPhotos);
 
-function myFunction() {
-  var x = document.getElementById("searchbar");
-  let input = x.value.toLowerCase();
-  console.log(input);
+function searchPhotos() {
+    const input = document.getElementById("searchbar").value.toLowerCase();
+    console.log(input);
 }

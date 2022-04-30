@@ -32,7 +32,8 @@ form {
 .gallery {
     max-width: 900px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, 200px);
+    place-content: space-between space-evenly;
     grid-auto-rows: minmax(200px, auto); 
     grid-gap: 15px;
     margin: 1em auto;
