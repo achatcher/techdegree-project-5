@@ -80,10 +80,19 @@ window.addEventListener('load', function() {
   });
 });
 
-//Search functionality ----- need help here!
+//Search functionality
 document.getElementById("searchbar").addEventListener("keyup", searchPhotos);
 
 function searchPhotos() {
     const input = document.getElementById("searchbar").value.toLowerCase();
-    console.log(input);
+    let pics = document.querySelectorAll(".photos");
+    for (let i = 0; i < pics.length; i++) {
+        let pic = pics[i];
+        let caption = pic.getAttribute("data-caption").toLowerCase();
+        if (caption.indexOf(input) > -1) {
+            pics[i].style.display="";
+        } else {
+            pics[i].style.display="none";
+        }
+    }
 }
